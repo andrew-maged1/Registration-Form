@@ -1,0 +1,26 @@
+$colors : 
+(
+    "white"  :white ,
+    "black"  :black ,
+    "red"  :red ,
+    "blue"  :blue ,
+    "green"  :green ,
+    "yellow"  :yellow ,
+    "cyan" : #2795e9  ,
+    "brown" : #661414 
+);
+
+// $gradient-val : #80CBC4
+
+@each $key,$val in $colors
+{
+    .bg-#{$key}
+    {
+        background-color: $val;
+    }
+
+    .text-#{$key}
+    {
+        color: $val;
+    }
+}

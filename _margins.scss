@@ -1,0 +1,174 @@
+
+.m-auto
+{
+    margin : auto ;
+}
+
+$root-margin-val : auto ;
+
+@for $i from 1 through 5 
+{
+    .m-#{$i}
+    {
+        @if $i == 1
+        {   
+            margin : 0.25 * $root-margin-val ;
+        }
+
+        @else if $i == 2 
+        {
+            margin : 0.5 * $root-margin-val ;
+        }
+
+        @else if $i == 3 
+        {
+            margin :  $root-margin-val ;
+        }
+
+        @else if $i == 4 
+        {
+            margin : 1.5 * $root-margin-val ;
+        }
+
+        @else if $i == 5 
+        {
+            margin : 3 * $root-margin-val ;
+        }
+        
+    }
+}
+
+@mixin marginDirections($dir)
+{
+    @for $i from 1 through 5 
+{
+    .m-#{$dir}-#{$i}
+    {
+        @if $dir == 't' 
+        {
+            @if $i == 1
+            {   
+                margin-top : 0.25 * $root-margin-val ;
+            }
+
+            @else if $i == 2 
+            {
+                margin-top : 0.5 * $root-margin-val ;
+            }
+
+            @else if $i == 3 
+            {
+                margin-top :  $root-margin-val ;
+            }
+
+            @else if $i == 4 
+            {
+                margin-top : 1.5 * $root-margin-val ;
+            }
+
+            @else if $i == 5 
+            {
+                margin-top : 3 * $root-margin-val ;
+            }
+        }
+        
+        @else if $dir == 'b' 
+        {
+            @if $i == 1
+            {   
+                margin-bottom : 0.25 * $root-margin-val ;
+            }
+
+            @else if $i == 2 
+            {
+                margin-bottom : 0.5 * $root-margin-val ;
+            }
+
+            @else if $i == 3 
+            {
+                margin-bottom :  $root-margin-val ;
+            }
+
+            @else if $i == 4 
+            {
+                margin-bottom : 1.5 * $root-margin-val ;
+            }
+
+            @else if $i == 5 
+            {
+                margin-bottom : 3 * $root-margin-val ;
+            }
+        }
+
+        @else if $dir == 's' 
+        {
+            @if $i == 1
+            {   
+                margin-left : 0.25 * $root-margin-val ;
+            }
+
+            @else if $i == 2 
+            {
+                margin-left : 0.5 * $root-margin-val ;
+            }
+
+            @else if $i == 3 
+            {
+                margin-left :  $root-margin-val ;
+            }
+
+            @else if $i == 4 
+            {
+                margin-left : 1.5 * $root-margin-val ;
+            }
+
+            @else if $i == 5 
+            {
+                margin-left : 3 * $root-margin-val ;
+            }
+        }
+
+        @else if $dir == 'e' 
+        {
+            @if $i == 1
+            {   
+                margin-right : 0.25 * $root-margin-val ;
+            }
+
+            @else if $i == 2 
+            {
+                margin-right : 0.5 * $root-margin-val ;
+            }
+
+            @else if $i == 3 
+            {
+                margin-right :  $root-margin-val ;
+            }
+
+            @else if $i == 4 
+            {
+                margin-right : 1.5 * $root-margin-val ;
+            }
+
+            @else if $i == 5 
+            {
+                margin-right : 3 * $root-margin-val ;
+            }
+        }
+        
+    }
+}
+}
+
+
+@include marginDirections('t');
+@include marginDirections('b');
+@include marginDirections('s');
+@include marginDirections('e');
+
+*
+{
+    margin : 0px ;
+    padding: 0px ;
+    box-sizing: border-box;
+}
